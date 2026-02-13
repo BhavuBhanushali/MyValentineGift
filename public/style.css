@@ -11,6 +11,45 @@ canvas {
     background: #111;
 }
 
+#valentineWish {
+  position: absolute;
+  top: calc(40% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  font-weight: bold;
+  color: rgb(158, 158, 170);
+  text-shadow: 0 0 14px rgba(118, 168, 37, 0.6);
+  text-align: center;
+  z-index: 10;
+  white-space: nowrap;
+  margin-bottom: auto;
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  #valentineWish { white-space: normal; max-width: 90vw; }
+}
+
+#valentineDate {
+  position: absolute;
+  top: calc(50% + 60px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  font-weight: bold;
+  color: rgba(45, 45, 255, 1);
+  text-shadow: 0 0 12px rgba(45, 45, 255, 0.6);
+  text-align: center;
+  z-index: 10;
+  white-space: nowrap;
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  #valentineDate { white-space: normal; max-width: 90vw; }
+}
+
 #valentinesButton {
     display: none;
     position: absolute;

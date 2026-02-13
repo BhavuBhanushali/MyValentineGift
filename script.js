@@ -57,6 +57,10 @@ button.addEventListener("click", () => {
   if (button.textContent === "Click Me! ❤") {
     hasStarted = true;
     button.textContent = "❤";
+    var wishEl = document.getElementById("valentineWish");
+    var dateEl = document.getElementById("valentineDate");
+    if (wishEl) wishEl.style.display = "none";
+    if (dateEl) dateEl.style.display = "none";
     // fetch('send_mail.php')
     //   .then(response => {
     //     if (response.ok) {
@@ -265,12 +269,13 @@ var sliderPrev = document.getElementById("sliderPrev");
 var sliderNext = document.getElementById("sliderNext");
 var sliderIndex = 0;
 
-var popupImagesFallback = [
-    "public/images/us-1.png", "public/images/us-2.png", "public/images/us-3.png",
-    "public/images/us-4.png", "public/images/us-5.png",
-    "public/images/us-1.jpeg", "public/images/us-2.jpeg", "public/images/us-3.jpeg",
-    "public/images/us-4.jpeg", "public/images/us-5.jpeg"
-];
+var popupImagesFallback = (function () {
+    var list = [];
+    for (var i = 1; i <= 4; i++) list.push("public/images/us-" + i + ".png");
+    list.push("public/images/us-5.jpeg");
+    for (var j = 6; j <= 57; j++) list.push("public/images/us-" + j + ".png");
+    return list;
+})();
 
 function buildPopupBg() {
     popupBg.innerHTML = "";
