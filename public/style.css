@@ -105,6 +105,43 @@ canvas {
   background: rgba(45, 45, 255, 0.8);
 }
 
+#videoButton {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #2d2dff;
+  background: rgba(45, 45, 255, 0.4);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+#videoButton:hover {
+  background: rgba(45, 45, 255, 0.8);
+}
+
+.video-modal video {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1001;
+}
+.video-modal .popup-close {
+  right: 16px;
+  top: 16px;
+}
+
 .popup {
   position: fixed;
   inset: 0;

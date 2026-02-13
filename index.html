@@ -46,6 +46,14 @@
     <!-- <div id="valentineDate">Special Valentine Feb 14 2026</div> -->
     <button id="valentinesButton">Click Me! ❤</button>
     <button type="button" id="photosButton" aria-label="Our photos">📷</button>
+    <button type="button" id="videoButton" aria-label="Play video">▶</button>
+    <div id="videoModal" class="popup video-modal" hidden>
+      <button type="button" id="videoModalClose" class="popup-close" aria-label="Close">&times;</button>
+      <video id="videoModalPlayer" controls playsinline>
+        <source src="public/vdos/lv_7210556777807531265_20250329031350.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div id="photosPopup" class="popup" hidden>
       <div class="popup-bg" id="popupBg" aria-hidden="true"></div>
       <button type="button" id="popupClose" class="popup-close" aria-label="Close">&times;</button>

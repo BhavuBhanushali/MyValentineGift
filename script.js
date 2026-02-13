@@ -352,6 +352,29 @@ function setSliderImage(index) {
 
 document.getElementById("photosButton").addEventListener("click", openPhotosPopup);
 popupClose.addEventListener("click", closePhotosPopup);
+
+var videoModal = document.getElementById("videoModal");
+var videoModalClose = document.getElementById("videoModalClose");
+var videoModalPlayer = document.getElementById("videoModalPlayer");
+function openVideoModal() {
+    videoModal.removeAttribute("hidden");
+    requestAnimationFrame(function () {
+        videoModal.classList.add("is-open");
+        videoModalPlayer.play();
+    });
+}
+function closeVideoModal() {
+    videoModal.classList.remove("is-open");
+    videoModalPlayer.pause();
+    setTimeout(function () {
+        videoModal.setAttribute("hidden", "");
+    }, 300);
+}
+document.getElementById("videoButton").addEventListener("click", openVideoModal);
+videoModalClose.addEventListener("click", closeVideoModal);
+videoModal.addEventListener("click", function (e) {
+    if (e.target === videoModal) closeVideoModal();
+});
 popup.addEventListener("click", function (e) {
     if (e.target === popup) closePhotosPopup();
 });
