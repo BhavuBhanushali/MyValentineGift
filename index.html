@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sojijr/valentine-website/main/public/images/favicon.png">
+    <link rel="icon" href="public/images/favicon.png" type="image/x-icon" />  
+    <title>Happy Valentine's Day My Love</title>
+    <link rel="stylesheet" href="public/style.css">
+  </head>
+  <body>
+    <canvas id="starfield"></canvas>
+    <button id="valentinesButton">Click Me! ❤</button>
+    <button type="button" id="photosButton" aria-label="Our photos">📷</button>
+    <div id="photosPopup" class="popup" hidden>
+      <div class="popup-bg" id="popupBg" aria-hidden="true"></div>
+      <button type="button" id="popupClose" class="popup-close" aria-label="Close">&times;</button>
+      <div class="popup-slider">
+        <button type="button" id="sliderPrev" class="slider-btn slider-prev" aria-label="Previous">&#10094;</button>
+        <img id="sliderImage" src="" alt="Our photo" />
+        <button type="button" id="sliderNext" class="slider-btn slider-next" aria-label="Next">&#10095;</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
